@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MentorAndroidTask</string>
+
+    <string name="setting">Settings</string>
+    <string name="contactsButtonText">view my contacts</string>
+    <string name="editProfileButton">Edit profile</string>
+    <string name="helpingText">Go to settings and fill out the profile</string>
+</resources>

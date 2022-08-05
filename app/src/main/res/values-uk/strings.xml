@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MentorAndroidTask</string>
+    <string name="setting">Налаштування</string>
+    <string name="contactsButtonText">Мої контакти</string>
+    <string name="editProfileButton">Редагувати профіль</string>
+    <string name="helpingText">Зайдіть в налаштування і заповніть профіль</string>
+</resources>
