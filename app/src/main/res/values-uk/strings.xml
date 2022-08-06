@@ -4,4 +4,13 @@
     <string name="contactsButtonText">Мої контакти</string>
     <string name="editProfileButton">Редагувати профіль</string>
     <string name="helpingText">Зайдіть в налаштування і заповніть профіль</string>
+    <string name="registerHelloText">Вітаю!</string>
+    <string name="registerHelpText">Введіть свою адресу електронної пошти та пароль нижче</string>
+    <string name="emailEditText">Електронна пошта</string>
+    <string name="passEditText">Пароль</string>
+    <string name="rememberMe">Запам\'ятати мене</string>
+    <string name="forgotPass">Забули пароль?</string>
+    <string name="loginButton">Увійти</string>
+    <string name="singUpHelpText">Нема аккаунту?</string>
+    <string name="singUpText">Реєстрація</string>
 </resources>

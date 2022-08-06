@@ -5,4 +5,13 @@
     <string name="contactsButtonText">view my contacts</string>
     <string name="editProfileButton">Edit profile</string>
     <string name="helpingText">Go to settings and fill out the profile</string>
+    <string name="registerHelloText">Hello!</string>
+    <string name="registerHelpText">Enter your email and password below</string>
+    <string name="emailEditText">E-mail</string>
+    <string name="passEditText">Password</string>
+    <string name="rememberMe">Remember me</string>
+    <string name="forgotPass">Forgot your password?</string>
+    <string name="loginButton">Login</string>
+    <string name="singUpHelpText">Don\'t have account?</string>
+    <string name="singUpText">Sing up</string>
 </resources>

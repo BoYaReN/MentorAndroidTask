@@ -22,13 +22,7 @@
         <item name="android:background">@color/darkBlue</item>
     </style>
 
-    <style name="editProfileButton">
-        <item name="android:layout_marginRight">18dp</item>
-        <item name="android:layout_marginLeft">18dp</item>
-        <item name="android:layout_marginBottom">13dp</item>
-        <item name="backgroundTint">@color/darkBlue</item>
-        <item name="android:textColor">@color/black</item>
-    </style>
+
 
     <style name="helpingText">
         <item name="android:textColor">@color/gray </item>
