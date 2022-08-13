@@ -17,7 +17,8 @@
         android:textColor="@color/white_100"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="@id/backgroud"
-        app:layout_constraintTop_toTopOf="@id/backgroud" />
+        app:layout_constraintTop_toTopOf="@id/backgroud"
+        android:fontFamily="@font/tirogurmukhi_regular"/>
 
     <LinearLayout
         android:id="@+id/avatarImageLinearLayout"
@@ -38,16 +39,17 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/nameTextView"
+        android:id="@+id/userNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Bohdan Yaremchak"
+        android:text="User name"
         android:textColor="@color/white_100"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="@id/backgroud"
         app:layout_constraintRight_toRightOf="@id/backgroud"
-        app:layout_constraintTop_toBottomOf="@id/avatarImageLinearLayout" />
+        app:layout_constraintTop_toBottomOf="@id/avatarImageLinearLayout"
+        android:fontFamily="@font/tirogurmukhi_regular"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/careerTextView"
@@ -55,10 +57,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Android developer"
+        android:text="Career"
         app:layout_constraintLeft_toLeftOf="@dimen/centrality"
         app:layout_constraintRight_toRightOf="@dimen/centrality"
-        app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+        app:layout_constraintTop_toBottomOf="@id/userNameTextView"
+        android:fontFamily="@font/tirogurmukhi_regular"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/homeAddressTextView"
@@ -69,7 +72,8 @@
         android:text="Home address"
         app:layout_constraintLeft_toLeftOf="@dimen/centrality"
         app:layout_constraintRight_toRightOf="@dimen/centrality"
-        app:layout_constraintTop_toBottomOf="@id/careerTextView" />
+        app:layout_constraintTop_toBottomOf="@id/careerTextView"
+        android:fontFamily="@font/tirogurmukhi_regular"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/verticalCenterGuideLine"
@@ -129,7 +133,8 @@
         app:layout_constraintEnd_toEndOf="@id/backgroud"
         android:text="@string/helpingText"
         android:layout_marginBottom="10dp"
-        style = "@style/helpingText"/>
+        style = "@style/helpingText"
+        android:fontFamily="@font/tirogurmukhi_regular"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/editProfileButtonLineralLayout"
@@ -139,7 +144,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="13dp"
         app:layout_constraintBottom_toTopOf="@+id/contactsViewButtonLineralLayout"
-        android:background="@drawable/outline_button">
+        style="@style/editProfileButtonLayout">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/editProfileButton"
@@ -147,7 +152,7 @@
             android:layout_height="40dp"
             android:background="#00000000"
             android:text="@string/editProfileButton"
-            android:textColor="@color/black"
+            style="@style/editProfileButtonText"
             android:textSize="14sp"
             android:textAllCaps="false" />
 

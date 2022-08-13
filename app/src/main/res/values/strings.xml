@@ -5,13 +5,24 @@
     <string name="contactsButtonText">view my contacts</string>
     <string name="editProfileButton">Edit profile</string>
     <string name="helpingText">Go to settings and fill out the profile</string>
-    <string name="registerHelloText">Hello!</string>
-    <string name="registerHelpText">Enter your email and password below</string>
+
+    <string name="loginHelloText">Hello!</string>
+    <string name="loginHelpText">Enter your email and password below</string>
     <string name="emailEditText">E-mail</string>
     <string name="passEditText">Password</string>
     <string name="rememberMe">Remember me</string>
     <string name="forgotPass">Forgot your password?</string>
     <string name="loginButton">Login</string>
-    <string name="singUpHelpText">Don\'t have account?</string>
-    <string name="singUpText">Sing up</string>
+    <string name="signUpHelpText">Don\'t have account?</string>
+    <string name="signUpText">Sign up</string>
+    <string name="emailError">Wrong email!</string>
+    <string name="passError">Wrong password!</string>
+
+    <string name="registerHelloText">Let\'s get acquainted</string>
+    <string name="registerHelpText">Fill out the profile and go to the application!</string>
+    <string name="registerButton">Register</string>
+    <string name="registrationPolicy">By clicking Register you agree to our Terms and Conditions</string>
+    <string name="signInHelpText">Already have an account?</string>
+    <string name="signInText">Sign In</string>
+    <string name="or">Or</string>
 </resources>

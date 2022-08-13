@@ -3,7 +3,7 @@
     <style name="Theme.MentorAndroidTask" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/darkBlue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -15,7 +15,7 @@
     </style>
 
     <style name="circular">
-        <item name="cornerSize">55%</item>
+        <item name="cornerSize">50%</item>
     </style>
 
     <style name="buttons">
@@ -39,6 +39,14 @@
 
     <style name="optionsMenuProfile">
         <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="editProfileButtonText">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="editProfileButtonLayout">
+        <item name="android:background">@drawable/outline_button</item>
     </style>
 
     <style name="helpingText">

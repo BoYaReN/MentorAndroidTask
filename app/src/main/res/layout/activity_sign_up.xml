@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register"
+    tools:context=".SignUpActivity"
     style="@style/backgroud"
     android:id="@+id/backgroud">
 
@@ -25,13 +25,15 @@
             android:layout_height="wrap_content"
             android:text="@string/registerHelloText"
             android:textColor="@color/white_100"
-            android:textSize="24sp"/>
+            android:textSize="24sp"
+            android:fontFamily="@font/tirogurmukhi_regular"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white_100"
             android:textSize="12sp"
+            android:fontFamily="@font/tirogurmukhi_regular"
             android:text="@string/registerHelpText"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -52,7 +54,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00000000"
-            android:hint="@string/emailEditText" />
+            android:hint="@string/emailEditText"
+            android:textColor="@color/white_100"
+            android:text=""/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,7 +77,8 @@
             android:layout_height="wrap_content"
             android:background="#00000000"
             android:hint="@string/passEditText"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:textColor="@color/white_100"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -88,26 +93,53 @@
         android:layout_marginStart="16dp"
         android:textColor="@color/gray"
         android:buttonTint="@color/white_100"
-        android:text="@string/rememberMe"/>
+        android:text="@string/rememberMe"
+        android:fontFamily="@font/tirogurmukhi_regular"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/googleSingUpButtonLineartLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@id/orTextView"
+        app:layout_constraintStart_toStartOf="@id/backgroud"
+        app:layout_constraintEnd_toEndOf="@id/backgroud"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/googlebutton"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="Google"
+            android:drawableStart="@drawable/ic_google" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/orTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/rememberMeCheckBox"
-        app:layout_constraintBottom_toBottomOf="@id/rememberMeCheckBox"
+        app:layout_constraintBottom_toTopOf="@id/loginButtonLinearLayout"
+        app:layout_constraintStart_toStartOf="@id/backgroud"
         app:layout_constraintEnd_toEndOf="@id/backgroud"
-        android:layout_marginEnd="16dp"
-        android:textStyle="bold"
-        android:background="#00000000"
+        android:text="@string/or"
         android:textColor="@color/white_100"
-        android:textAllCaps="false"
-        android:text="@string/forgotPass"/>
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/loginButtonLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/singUpTextLinearLayout"
+        app:layout_constraintBottom_toBottomOf="@id/registerPolicy"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="30dp"
@@ -119,37 +151,54 @@
             android:layout_height="55dp"
             android:background="#00000000"
             android:textColor="@color/white_100"
-            android:text="@string/loginButton"
-            android:textSize="24sp" />
-
+            android:text="@string/registerButton"
+            android:textSize="24sp"
+            android:onClick="register"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-<androidx.appcompat.widget.LinearLayoutCompat
-    android:id="@+id/singUpTextLinearLayout"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintBottom_toBottomOf="@id/backgroud"
-    app:layout_constraintStart_toStartOf="@id/backgroud"
-    app:layout_constraintEnd_toEndOf="@id/backgroud"
-    android:layout_marginBottom="16dp">
-
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/registerPolicy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/singUpHelpText"
+        app:layout_constraintBottom_toTopOf="@id/signInTextLinearLayout"
+        app:layout_constraintStart_toStartOf="@id/backgroud"
+        app:layout_constraintEnd_toEndOf="@id/backgroud"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:text="@string/registrationPolicy"
+        android:textSize="12sp"
         android:textColor="@color/gray"
-        android:textSize="14sp"/>
+        android:gravity="center"/>
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/signInTextLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        android:text="@string/singUpText"
-        android:textColor="@color/white_100"/>
+        app:layout_constraintBottom_toBottomOf="@id/backgroud"
+        app:layout_constraintStart_toStartOf="@id/backgroud"
+        app:layout_constraintEnd_toEndOf="@id/backgroud"
+        android:layout_marginBottom="16dp">
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signInHelpText"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:fontFamily="@font/tirogurmukhi_regular"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/signUpText"
+            android:textColor="@color/white_100"
+            android:fontFamily="@font/tirogurmukhi_regular"
+            android:onClick="signIn"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 

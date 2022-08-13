@@ -1,16 +1,29 @@
 <resources>
     <string name="app_name">MentorAndroidTask</string>
+<!--    MainActivity-->
     <string name="setting">Налаштування</string>
     <string name="contactsButtonText">Мої контакти</string>
     <string name="editProfileButton">Редагувати профіль</string>
     <string name="helpingText">Зайдіть в налаштування і заповніть профіль</string>
-    <string name="registerHelloText">Вітаю!</string>
-    <string name="registerHelpText">Введіть свою адресу електронної пошти та пароль нижче</string>
+<!--    AuthActivity-->
+    <string name="loginHelloText">Вітаю!</string>
+    <string name="loginHelpText">Введіть свою адресу електронної пошти та пароль нижче</string>
     <string name="emailEditText">Електронна пошта</string>
     <string name="passEditText">Пароль</string>
     <string name="rememberMe">Запам\'ятати мене</string>
     <string name="forgotPass">Забули пароль?</string>
     <string name="loginButton">Увійти</string>
-    <string name="singUpHelpText">Нема аккаунту?</string>
-    <string name="singUpText">Реєстрація</string>
+    <string name="signUpHelpText">Нема аккаунту?</string>
+    <string name="signUpText">Реєстрація</string>
+    <string name="emailError">Неправильна пошта!</string>
+    <string name="passError">Неправильний пароль!</string>
+<!--    SignUpActivity-->
+    <string name="registerHelloText">Давай знайомитись</string>
+    <string name="registerHelpText">Заповнюйте профіль і переходьте до заявки!</string>
+    <string name="registerButton">Зареєструватися</string>
+    <string name="registrationPolicy">Натиснувши «Зареєструватися», ви погоджуєтеся \n з нашими умовами</string>
+    <string name="signInHelpText">Вже маєш аккаунт?</string>
+    <string name="signInText">Увійти</string>
+    <string name="or">Або</string>
+
 </resources>
