@@ -33,7 +33,7 @@
     </style>
 
 
-    <style name="backgroud">
+    <style name="background">
         <item name="android:background">@color/darkBlue</item>
     </style>
 
@@ -41,11 +41,8 @@
         <item name="android:background">@color/white</item>
     </style>
 
-    <style name="editProfileButtonText">
+    <style name="editProfileButton">
         <item name="android:textColor">@color/black</item>
-    </style>
-
-    <style name="editProfileButtonLayout">
         <item name="android:background">@drawable/outline_button</item>
     </style>
 
@@ -57,4 +54,11 @@
         <item name="backgroundTint">#00000000</item>
     </style>
 
+
+    <style name="inputEditTextLayout">
+        <item name="boxStrokeColor">@color/white_main</item>
+        <item name="hintTextColor">@color/white_main</item>
+        <item name="android:textColorHint">@color/white_main</item>
+        <item name="errorTextColor">@color/login_error</item>
+    </style>
 </resources>

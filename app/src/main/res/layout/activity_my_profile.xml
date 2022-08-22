@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyProfileActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="@dimen/main_indent"
+        android:text="@string/setting"
+        android:textColor="@color/white_main"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/open_sans_regular"/>
+
+    <LinearLayout
+        android:id="@+id/avatarImageLinearLayout"
+        android:layout_width="113dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="71dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatarImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            app:shapeAppearanceOverlay="@style/circular" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/userName"
+        android:textColor="@color/white_main"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatarImageLinearLayout"
+        android:fontFamily="@font/open_sans_regular"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/careerTextView"
+        style="@style/profileSmallText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/career"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userNameTextView"
+        android:fontFamily="@font/open_sans_regular"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/homeAddressTextView"
+        style="@style/profileSmallText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_indent"
+        android:text="@string/homeAddress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/careerTextView"
+        android:fontFamily="@font/open_sans_regular"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalCenterGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/verticalCenterGuideLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/optionsMenuProfile">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/messengersHorizontalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/messengersRightGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/messengersLeftGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/facebookImageButton"
+            app:layout_constraintBottom_toTopOf="@id/messengersHorizontalGuideLine"
+            app:layout_constraintStart_toStartOf="@id/messengersRightGuideLine"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/facebook_ic"
+            style="@style/socialNetworksImageButton"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/linkedinImageButton"
+            app:layout_constraintBottom_toTopOf="@id/messengersHorizontalGuideLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/linkedin_ic"
+            style="@style/socialNetworksImageButton"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/vkImageButton"
+            app:layout_constraintBottom_toTopOf="@id/messengersHorizontalGuideLine"
+            app:layout_constraintEnd_toEndOf="@id/messengersLeftGuideLine"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/vk_ic"
+            android:layout_marginStart="32dp"
+            style="@style/socialNetworksImageButton"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/helpingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/editProfileButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/helpingText"
+            android:layout_marginBottom="10dp"
+            style = "@style/helpingText"
+            android:fontFamily="@font/open_sans_regular"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editProfileButton"
+            app:layout_constraintBottom_toTopOf="@id/contactsViewButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/main_indent"
+            android:layout_marginEnd="@dimen/main_indent"
+            android:layout_marginBottom="@dimen/main_indent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/editProfileButton"
+            style="@style/editProfileButton"
+
+            android:textSize="14sp"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/contactsViewButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/main_indent"
+            android:layout_marginEnd="@dimen/main_indent"
+            android:layout_marginBottom="@dimen/main_indent"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/contacts_view_button"
+            android:text="@string/contactsButtonText"
+            android:fontFamily="@font/open_sans_regular"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

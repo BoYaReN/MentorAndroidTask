@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="backgroud">
+    <style name="background">
         <item name="android:background">@color/darkBlue_100</item>
     </style>
 
@@ -22,11 +22,8 @@
         <item name="android:background">@color/darkBlue</item>
     </style>
 
-    <style name="editProfileButtonText">
+    <style name="editProfileButton">
         <item name="android:textColor">@color/gray</item>
-    </style>
-
-    <style name="editProfileButtonLayout">
         <item name="android:background">@drawable/outline_gray_button</item>
     </style>
 

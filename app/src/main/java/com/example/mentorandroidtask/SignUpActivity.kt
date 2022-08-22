@@ -1,51 +1,71 @@
 package com.example.mentorandroidtask
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
-import android.view.View
 import com.example.mentorandroidtask.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
 
-    val sharedPreference by lazy { getSharedPreferences("LoginDataCheck", Context.MODE_PRIVATE) }
+    private val sharedPreference by lazy { getSharedPreferences("LoginDataCheck", Context.MODE_PRIVATE) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setListener()
     }
 
+    private fun setListener(){
+        listenerSignInTextView()
+        listenerRegisterButton()
+    }
 
-    fun register(view: View){
-        val mainIntent = Intent(this, MainActivity::class.java)
-        if (Patterns.EMAIL_ADDRESS.matcher(binding.emailEditText.text.toString().substringBefore(" ")).matches()){
-            if (binding.passEditText.text.toString().length >= 8) {
-                if(binding.rememberMeCheckBox.isChecked) {
-                    sharedPreference.edit().putString("email", binding.emailEditText.text.toString()).apply()
-                    sharedPreference.edit().putString("password", binding.passEditText.text.toString()).apply()
+    @SuppressLint("CommitPrefEdits")
+    private fun listenerRegisterButton() {
+        binding.registerButton.setOnClickListener {
+            val email = binding.emailEditText.text.toString()
+            val pass = binding.passEditText.text.toString()
 
-                } else{
-                    sharedPreference.edit().clear().apply()
-                }
-                mainIntent.putExtra("EMAILTEXT", binding.emailEditText.text.toString())
-                startActivity(mainIntent)
-            } else{
+            val emailValidation = validator.emailValidation(email)
+            val passValidation = validator.passValidation(pass)
+
+            if (!emailValidation) {
+                binding.emailEditText.error = getString(R.string.emailError)
+            }
+            if (!passValidation) {
                 binding.passEditText.error = getString(R.string.passError)
             }
-        } else{
-            binding.emailEditText.error = getString(R.string.emailError)
-        }
 
+            if (emailValidation && passValidation) {
+                if (binding.rememberMeCheckBox.isChecked) {
+                    sharedPreference.edit()
+                        .putString(Constants.sharedPref.EMAIL_KEY, binding.emailEditText.text.toString()).apply()
+                    sharedPreference.edit()
+                        .putString(Constants.sharedPref.PASS_KEY, binding.passEditText.text.toString()).apply()
+                } else {
+                    sharedPreference.edit().clear().apply()
+                }
+                goToMyProfile(email)
+            }
+        }
     }
 
-    fun signIn(view: View){
-        val authIntent = Intent(this, AuthActivity::class.java)
-        startActivity(authIntent)
-        finish()
+    private fun goToMyProfile(email: String) {
+        val myProfileIntent = Intent(this, MyProfileActivity::class.java)
+        myProfileIntent.putExtra(Constants.EMAIL_TEXT, email)
+        startActivity(myProfileIntent)
+    }
+
+    private fun listenerSignInTextView(){
+        binding.signInTextView.setOnClickListener{
+            val authIntent = Intent(this, AuthActivity::class.java)
+            startActivity(authIntent)
+            finish()
+        }
     }
 }

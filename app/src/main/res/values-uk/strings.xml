@@ -5,6 +5,9 @@
     <string name="contactsButtonText">Мої контакти</string>
     <string name="editProfileButton">Редагувати профіль</string>
     <string name="helpingText">Зайдіть в налаштування і заповніть профіль</string>
+    <string name="userName">User Name</string>
+    <string name="career">Career</string>
+    <string name="homeAddress">Home address</string>
 <!--    AuthActivity-->
     <string name="loginHelloText">Вітаю!</string>
     <string name="loginHelpText">Введіть свою адресу електронної пошти та пароль нижче</string>
@@ -24,6 +27,6 @@
     <string name="registrationPolicy">Натиснувши «Зареєструватися», ви погоджуєтеся \n з нашими умовами</string>
     <string name="signInHelpText">Вже маєш аккаунт?</string>
     <string name="signInText">Увійти</string>
-    <string name="or">Або</string>
+    <string name="or">або</string>
 
 </resources>
