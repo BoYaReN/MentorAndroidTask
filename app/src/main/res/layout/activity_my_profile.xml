@@ -8,6 +8,7 @@
     tools:context=".MyProfileActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/settingTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
@@ -19,22 +20,16 @@
         app:layout_constraintTop_toTopOf="parent"
         android:fontFamily="@font/open_sans_regular"/>
 
-    <LinearLayout
-        android:id="@+id/avatarImageLinearLayout"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatarImageView"
         android:layout_width="113dp"
         android:layout_height="113dp"
-        android:layout_marginTop="71dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/avatarImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher"
-            app:shapeAppearanceOverlay="@style/circular" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@id/settingTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/main_indent"
+        android:src="@mipmap/ic_launcher"
+        app:shapeAppearanceOverlay="@style/circular" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/userNameTextView"
@@ -46,7 +41,7 @@
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/avatarImageLinearLayout"
+        app:layout_constraintTop_toBottomOf="@id/avatarImageView"
         android:fontFamily="@font/open_sans_regular"/>
 
     <androidx.appcompat.widget.AppCompatTextView
